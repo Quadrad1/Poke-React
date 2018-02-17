@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: arial;
+    box-sizing: border-box;
+    color: #333;
+}
+.none{
+    transform: scale(0)!important;
+    opacity: 0;
+    transform: all 0.9s;
+}
+main{
+    width: 100%;
+    min-height: 100vh;
+    background: #515860;
+    overflow: hidden;
+    padding-bottom: 300px;
+}
+.poke-app{
+    max-width: 600px;
+    margin: 80px auto;
+    border: 12px solid #2c6d40;
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+}
+.poke-app__header{
+    width: 100%;
+}
+.poke-app__title{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 2px solid #2c6d40;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.poke-app__search-box{
+    display: flex;
+    width: 100%;
+    border-bottom: 2px solid #2c6d40;
+}
+.poke-app__serch-input{
+    padding: 10px;
+    width: 85%;
+    border: none;
+    font-size: 19px;
+}
+.btn_search-box{
+    width: 15%;
+    border-bottom: none;
+}
+.btn{
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #2c6d40;
+    background: #fff;
+    cursor: pointer;
+}
+.pokemon-item__btn{
+    margin: auto;
+    width: 150px;
+    background: #2e6c40;
+    color: #fff;
+    padding: 5px;
+    font-size: 18px;
+}
+.fa-search{
+    color:#2c6d40;
+}
+.poke-app__pokemons{
+    position: relative;
+    border: 1px solid transparent;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.pokemon-item{
+    width: 48%;
+    border:2px solid #2c6d40;
+    margin: 20px 0;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+}
+.pokemon-item__logo__wrap{
+    width: 50%;
+    
+}
+.pokemon-item__logo__wrap img{
+    max-width: 100%;
+    border-radius: 50%;
+
+}
+.pokemon-item__name{
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 20px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.pokemon-item__all-info{
+    width: 90%;
+    border:1px solid #2c6d40;
+    position: absolute;
+    top: 105%;
+    background: #fff;
+    z-index: 2;
+    transform: scale(1);
+    transition: all 0.5s;
+}
+.pokemon-item__features{
+    display: flex;
+    align-items: stretch;
+    
+}
+.pokemon-item__feature{
+    width: 50%;
+    text-align: center;
+    font-size: 17px;
+    padding: 10px;
+    border-bottom:1px solid #2c6d40
+}

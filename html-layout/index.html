@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="app.css">
+		<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+		<title>Document</title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+				font-family: arial;
+				box-sizing: border-box;
+				color: #333;
+			}
+			main{
+				width: 100%;
+				min-height: 100vh;
+				background: #515860;;
+				overflow: hidden;
+			}
+			.poke-app{
+				max-width: 600px;
+				margin: 80px auto;
+				border: 12px solid #2c6d40;
+				background: #fff;
+				padding: 30px;
+				box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+				display: flex;
+				flex-wrap: wrap;
+			}
+			.poke-app__title{
+				width: 100%;
+				text-align: center;
+				padding: 10px;
+				border-bottom: 2px solid #2c6d40;
+				margin-bottom: 20px;
+				font-size: 30px;
+				font-weight: 300;
+				text-transform: uppercase;
+			}
+			.poke-app__search-box{
+				display: flex;
+				width: 100%;
+				border-bottom: 2px solid #2c6d40;
+			}
+			.poke-app__serch-input{
+				padding: 10px;
+				width: 85%;
+				border: none;
+				font-size: 19px;
+			}
+			.btn_search-box{
+				width: 15%;
+				border-bottom: none;
+			}
+			.btn{
+				padding: 10px;
+				text-align: center;
+				border: 2px solid #2c6d40;
+				background: #fff;
+				cursor: pointer;
+			}
+			.pokemon-item__btn{
+				margin: auto;
+				width: 150px;
+				background: #2e6c40;
+				color: #fff;
+				padding: 5px;
+				font-size: 18px;
+			}
+			.fa-search{
+				color:#2c6d40;
+			}
+			.poke-app__pokemons{
+				position: relative;
+				border: 1px solid transparent;
+				width: 100%;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
+			.pokemon-item{
+				width: 48%;
+				border:2px solid #2c6d40;
+				margin: 20px 0;
+				padding: 10px;
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				position: relative;
+			}
+			.pokemon-item__logo__wrap{
+				width: 40%;
+				
+			}
+			.pokemon-item__logo__wrap img{
+				max-width: 100%;
+				border-radius: 50%;
+
+			}
+			.pokemon-item__name{
+				width: 60%;
+				font-size: 20px;
+				font-weight: 600;
+				text-transform: uppercase;
+			}
+			.pokemon-item__all-info{
+				width: 90%;
+				border:1px solid #2c6d40;
+				position: absolute;
+				top: 170px;
+				background: #fff;
+				z-index: 2;
+				display: none;
+			}
+			.pokemon-item__features{
+				display: flex;
+				align-items: stretch;
+				
+			}
+			.pokemon-item__feature{
+				width: 50%;
+				text-align: center;
+				font-size: 17px;
+				padding: 10px;
+				border-bottom:1px solid #2c6d40
+			}
+		</style>
+</head>
+<body>
+		<main>
+				<div class="wrapper poke-app">
+					 <h2 class="poke-app__title">Pokemons</h2>
+					 <div class="poke-app__search-box">
+							<input type="text" placeholder="Bulbasaur" class="poke-app__serch-input">
+							<button class="btn btn_search-box">
+							<i class="fas fa-search"></i>
+							</button>
+					 </div>
+					 <div class="poke-app__pokemons">
+							<div class="poke-app__pokemon-item pokemon-item">
+								 <div class="pokemon-item__logo__wrap">
+										<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="">
+								 </div>
+								 <span class="pokemon-item__name">bulbasaur</span>
+								 <button class="pokemon-item__btn btn">More info</button>
+								 <div class="pokemon-item__all-info">
+										<div class="pokemon-item__features">
+											 <span class="pokemon-item__feature">Base Stat</span>
+											 <span class="pokemon-item__feature">45</span>
+										</div>
+										<div class="pokemon-item__features">
+											 <span class="pokemon-item__feature">Base Stat</span>
+											 <span class="pokemon-item__feature">45</span>
+										</div>
+										<div class="pokemon-item__features">
+											 <span class="pokemon-item__feature">Base Stat</span>
+											 <span class="pokemon-item__feature">45</span>
+										</div>
+								 </div>
+							</div>
+							<div class="poke-app__pokemon-item pokemon-item">
+								 <div class="pokemon-item__logo__wrap">
+										<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="">
+								 </div>
+								 <span class="pokemon-item__name">bulbasaur</span>
+								 <button class="pokemon-item__btn btn">More info</button>
+								 <div class="pokemon-item__all-info">
+										<div class="pokemon-item__features">
+											 <span class="pokemon-item__feature">Base Stat</span>
+											 <span class="pokemon-item__feature">45</span>
+										</div>
+										<div class="pokemon-item__features">
+											 <span class="pokemon-item__feature">Base Stat</span>
+											 <span class="pokemon-item__feature">45</span>
+										</div>
+										<div class="pokemon-item__features">
+											 <span class="pokemon-item__feature">Base Stat</span>
+											 <span class="pokemon-item__feature">45</span>
+										</div>
+								 </div>
+							</div>
+							<div class="poke-app__pokemon-item pokemon-item">
+								 <div class="pokemon-item__logo__wrap">
+										<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="">
+								 </div>
+								 <span class="pokemon-item__name">bulbasaur</span>
+								 <button class="pokemon-item__btn btn">More info</button>
+								 <div class="pokemon-item__all-info">
+										<div class="pokemon-item__features">
+											 <span class="pokemon-item__feature">Base Stat</span>
+											 <span class="pokemon-item__feature">45</span>
+										</div>
+										<div class="pokemon-item__features">
+											 <span class="pokemon-item__feature">Base Stat</span>
+											 <span class="pokemon-item__feature">45</span>
+										</div>
+										<div class="pokemon-item__features">
+											 <span class="pokemon-item__feature">Base Stat</span>
+											 <span class="pokemon-item__feature">45</span>
+										</div>
+								 </div>
+							</div>
+							<div class="poke-app__pokemon-item pokemon-item">
+								 <div class="pokemon-item__logo__wrap">
+										<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="">
+								 </div>
+								 <span class="pokemon-item__name">bulbasaur</span>
+								 <button class="pokemon-item__btn btn">More info</button>
+								 <div class="pokemon-item__all-info">
+										<div class="pokemon-item__features">
+											 <span class="pokemon-item__feature">Base Stat</span>
+											 <span class="pokemon-item__feature">45</span>
+										</div>
+										<div class="pokemon-item__features">
+											 <span class="pokemon-item__feature">Base Stat</span>
+											 <span class="pokemon-item__feature">45</span>
+										</div>
+										<div class="pokemon-item__features">
+											 <span class="pokemon-item__feature">Base Stat</span>
+											 <span class="pokemon-item__feature">45</span>
+										</div>
+								 </div>
+							</div>
+							<div class="poke-app__pokemon-item pokemon-item">
+								 <div class="pokemon-item__logo__wrap">
+										<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="">
+								 </div>
+								 <span class="pokemon-item__name">bulbasaur</span>
+								 <button class="pokemon-item__btn btn">More info</button>
+								 <div class="pokemon-item__all-info">
+										<div class="pokemon-item__features">
+											 <span class="pokemon-item__feature">Base Stat</span>
+											 <span class="pokemon-item__feature">45</span>
+										</div>
+										<div class="pokemon-item__features">
+											 <span class="pokemon-item__feature">Base Stat</span>
+											 <span class="pokemon-item__feature">45</span>
+										</div>
+										<div class="pokemon-item__features">
+											 <span class="pokemon-item__feature">Base Stat</span>
+											 <span class="pokemon-item__feature">45</span>
+										</div>
+								 </div>
+							</div>
+							<div class="poke-app__pokemon-item pokemon-item">
+								 <div class="pokemon-item__logo__wrap">
+										<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="">
+								 </div>
+								 <span class="pokemon-item__name">bulbasaur</span>
+								 <button class="pokemon-item__btn btn">More info</button>
+								 <div class="pokemon-item__all-info">
+										<div class="pokemon-item__features">
+											 <span class="pokemon-item__feature">Base Stat</span>
+											 <span class="pokemon-item__feature">45</span>
+										</div>
+										<div class="pokemon-item__features">
+											 <span class="pokemon-item__feature">Base Stat</span>
+											 <span class="pokemon-item__feature">45</span>
+										</div>
+										<div class="pokemon-item__features">
+											 <span class="pokemon-item__feature">Base Stat</span>
+											 <span class="pokemon-item__feature">45</span>
+										</div>
+								 </div>
+							</div>
+					 </div>
+				</div>
+		 </main>
+		 
+</body>
+</html>
