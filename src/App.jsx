@@ -2,20 +2,33 @@ import React from 'react';
 
 import HeaderApp from './components/HeaderApp';
 import PokemonBox from './components/PokemonBox';
+import Pagination from './components/Pagination'
 
-import FontAwesomeIcon from 'react-fontawesome'
 
 class App extends React.Component{
     constructor(){
-        super();;
+        super();
         this.state = {
-            countPokemons:4,
-            pokemons:[]
+            countPokemons:20,
+            pokemonsPage:4,
+            pokemons:[],
+            currentPage:1
         }
     } 
+    changeCurrentPage=(currentPage)=>{
+        this.setState({ currentPage });
+        let all=[];
+        for(let i=currentPage * 4 - 3;i<=currentPage * 4;i++){
+            all.push(i);
+        }
+        console.log(all);
+        this.setState({
+            pokemons: all
+        });
+    }
     componentDidMount=()=>{
         let all=[];
-        for(let i=1;i<this.state.countPokemons;i++){
+        for(let i=this.state.currentPage;i<this.state.currentPage + 4;i++){
             all.push(i);
         }
         this.setState({
@@ -38,7 +51,13 @@ class App extends React.Component{
                                     />
                         })}  
                     </div> 
+                    <Pagination 
+                        mount={this.state.countPokemons} 
+                        currentPage={this.state.currentPage}
+                        handleCerrentPage={this.changeCurrentPage}
+                        />
                 </div>
+                
                 </main>
 
         );      

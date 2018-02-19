@@ -59,6 +59,7 @@ main{
     padding: 10px;
     text-align: center;
     border: 2px solid #2c6d40;
+    border-bottom: 0;
     background: #fff;
     cursor: pointer;
 }
@@ -130,4 +131,26 @@ main{
     font-size: 17px;
     padding: 10px;
     border-bottom:1px solid #2c6d40
+}
+.pagination{
+    display: flex;
+    max-width: 300px;
+    margin: 20px auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+
+}
+.pagination__number_active{
+    background: #2e6b40!important;
+    color: #fff!important;
+}
+.pagination__number{
+    padding: 6px 11px;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 50%;
+    color: #2e6b40;
+    border: 1px solid #2e6b40;
+    font-weight: 600;
 }

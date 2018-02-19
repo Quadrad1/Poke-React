@@ -51,7 +51,6 @@ class PokemonBox extends React.Component {
                             ability,
                             show: !this.state.show
                          });
-                        console.log('this.state.ability',this.state.ability);
                     })
                     .catch(error => console.error(error)); 
             })
